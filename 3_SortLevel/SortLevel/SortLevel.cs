@@ -22,6 +22,10 @@ namespace SortSpace
         public static List<int> KnuthSequence(int arraySize)
         {
             List<int> list = new List<int>();
+            if (arraySize <= 0)
+            {
+                return list;
+            }
 
             for (int knuthElement = KnuthNextStep(1, arraySize); knuthElement >= 1; knuthElement = CalculateKnuthPrestep(knuthElement))
                 list.Add(knuthElement);

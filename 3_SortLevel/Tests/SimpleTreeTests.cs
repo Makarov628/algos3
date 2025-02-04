@@ -28,6 +28,7 @@ namespace Tests
         [Test]
         public void KnuthSequence()
         {
+            CollectionAssert.AreEqual(new List<int> { }, SortLevel.KnuthSequence(0));
             CollectionAssert.AreEqual(new List<int> { 1 }, SortLevel.KnuthSequence(1));
             CollectionAssert.AreEqual(new List<int> { 1 }, SortLevel.KnuthSequence(2));
             CollectionAssert.AreEqual(new List<int> { 1 }, SortLevel.KnuthSequence(3));
