@@ -20,6 +20,11 @@ namespace SortSpace
 
         public void Step(int N)
         {
+            if (found != 0)
+            {
+                return;
+            }
+
             int central = (Right + Left) / 2;
 
             if (N == Array[central])
