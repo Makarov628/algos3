@@ -6,33 +6,33 @@ namespace SortSpace
 {
     public class BinarySearch
     {
-        int Left;
-        int Right;
-        private int[] array;
+        public int Left;
+        public int Right;
+        public int[] Array;
         private int found;
 
         public BinarySearch(int[] arr)
         {
             Left = 0;
             Right = arr.Length - 1;
-            array = arr;
+            Array = arr;
         }
 
         public void Step(int N)
         {
             int central = (Right + Left) / 2;
 
-            if (N == array[central])
+            if (N == Array[central])
             {
                 found = 1;
                 return;
             }
-            if (N < array[central])
+            if (N < Array[central])
             {
                 Right = central - 1;
                 found = 0;
             }
-            if (N > array[central])
+            if (N > Array[central])
             {
                 Left = central + 1;
                 found = 0;
@@ -45,7 +45,7 @@ namespace SortSpace
 
             if (Right - Left <= 1)
             {
-                found = array[Right] == N || array[Left] == N ? 1 : -1;
+                found = Array[Right] == N || Array[Left] == N ? 1 : -1;
                 return;
             }
         }
